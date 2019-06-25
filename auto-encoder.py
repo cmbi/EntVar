@@ -109,17 +109,6 @@ def trainModel():
 		torch.save(model, 'TotalModel.pt')
 		model.saveModels()
 
-# Transposes a list of strings
-def transpose(seqls):
-	return [''.join([seqls[i][p]for i in xrange(len(seqls))]) for p in xrange(len(seqls[0]))]
-	
-# Calculates the entropy of a MSA column
-def calcEntropyPosition(ls):
-	ls = ''.join(ls)
-	ls = np.array([ls.count(i)for i in 'QWERTYIPASDFGHKLCVNM'], dtype=np.float64)
-	ls = ls[ls>0]/ls.sum()
-	return abs(sum((np.log(ls)*ls)/np.log(20)))
-
 if __name__ == "__main__":
 	# Load the HSSP dataset
 	# Each row/sample represents a column of a MSA
