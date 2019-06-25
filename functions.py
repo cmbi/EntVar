@@ -47,7 +47,7 @@ def convert(ls):
 	return ls
 
 # Creating a dataset
-def createDataset(hsspFiles, datasetName):
+def createDataset(hsspFiles, datasetName='dset'):
 	dataset = np.zeros(int(10e6),20)
 	ind = 0
 	for hsspFile in hsspFiles:
