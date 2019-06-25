@@ -113,7 +113,8 @@ if __name__ == "__main__":
 	# Load the HSSP dataset
 	# Each row/sample represents a column of a MSA
 	# There are 20 values per row representing the amino-acids percentages
-	dset = np.load('dset.npy')
+	dsetName = 'dset.npy'
+	dset = np.load(dsetName)
 	# Sort the dataset, so it will learn about the amino-acid distributions
 	# If not sorted, the autoencoder will learn amino-acid properties
 	dset.sort() 
