@@ -47,10 +47,4 @@ def openHSSP(hsspLocation):
 	data = bz2.decompress(compressed)
 	return parsHssp(data, hsspid)
 
-a= glob.glob('hg-hssp/*')
-print len(a)
-print a[0]
-data = openHSSP(a[500])
-data = transpose(data)
-print calcEntropyPosition(data[0])
 
