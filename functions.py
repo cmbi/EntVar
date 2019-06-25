@@ -10,6 +10,7 @@ def transpose(seqls):
 # Example input: ['L','L', '.', 'I', 'L', 'I', 'I', '.', '.', 'V']
 def calcEntropyPosition(ls):
 	ls = ''.join(ls)
+	ls = ls.upper()
 	ls = np.array([ls.count(i)for i in 'QWERTYIPASDFGHKLCVNM'], dtype=np.float64)
 	ls = ls[ls>0]/ls.sum()
 	return abs(sum((np.log(ls)*ls)/np.log(20)))
